@@ -14,7 +14,6 @@ Valid Login
     [Documentation]
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
-    # Đợi form login hiển thị
     Wait Until Element Is Visible    css=input[name="username"]    timeout=10s
     Input Text    css=input[name="username"]    ${USERNAME}
     Input Text    css=input[name="password"]    ${PASSWORD}
