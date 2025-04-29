@@ -16,11 +16,9 @@ Valid Login
     Maximize Browser Window
     # Đợi form login hiển thị
     Wait Until Element Is Visible    css=input[name="username"]    timeout=10s
-    # Điền thông tin và submit
     Input Text    css=input[name="username"]    ${USERNAME}
     Input Text    css=input[name="password"]    ${PASSWORD}
     Click Button    css=button[type="submit"]
-    # Đợi Dashboard xuất hiện
     Wait Until Element Is Visible    xpath=//h6[text()="Dashboard"]    timeout=10s
     Page Should Contain Element    xpath=//h6[text()="Dashboard"]
     Capture Page Screenshot
@@ -34,7 +32,6 @@ Invalid Login
     Input Text    css=input[name="username"]    ${USERNAME}
     Input Text    css=input[name="password"]    ${INVALID_PASSWORD}
     Click Button    css=button[type="submit"]
-    # Đợi thông báo lỗi Invalid credentials
     Wait Until Page Contains    Invalid credentials    timeout=10s
     Page Should Contain    Invalid credentials
     Capture Page Screenshot
